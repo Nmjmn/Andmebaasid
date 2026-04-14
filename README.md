@@ -8,6 +8,7 @@ Andmebaasidega seotud sql kood ja konspektid
   ## Sisukord
   - [Andmebaasihaldusüsteemid](#-Andmebaasihaldusüsteemid)
   - [Põhimõisted](#-Põhimõisted)
+  - [Andmetüübid](#-Andmetüübid)
   - [Piirangud](#-Piirangud)
   - [Seosed](#-Seosed)
 
@@ -26,7 +27,7 @@ Andmebaas - struktueeritud admete kogum
 - primaarne võti -PK-Primary Key - veerg (tavaliselt nimiga id) unikaalse identifikaatooriga mis eristab iga kirjet
 - Välisvõti (võõrvõti) -FK Foreign Key - veerg, mis loob seose teise tabeli primaarvõtmega
 
-  ##Andmetüübid
+  ## Andmetüübid
   - INT, float, decimal(6,2) - numbrilised
   - varchar(50), char(6) -tekst/sümboolid
   - boolean, bool, bit -loogiline tüüp
