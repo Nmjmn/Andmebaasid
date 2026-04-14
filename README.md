@@ -27,4 +27,17 @@ Andmebaas - struktueeritud admete kogum
   - date, time, datetime - kuupäeva
 
 ## Piirangud
-1.
+```
+1. CHECK
+2. PRIMARY KEY
+3. FOREIGN KEY
+4. Not null
+5. UNIQUE
+```
+
+## Seosed
+- üks  - ühele (nt mees --naine)
+- üks  - mitmele (nt õpilane käib erinevates õppeainetes)
+  <img width="519" height="265" alt="{78702CBC-6009-46D8-972D-CE6510BDBFFD}" src="https://github.com/user-attachments/assets/aa87f6a7-7497-4f9d-9952-ae3c06e9da63" />
+- mitu  -mitmele (nt õpilane - õpetaja
+
