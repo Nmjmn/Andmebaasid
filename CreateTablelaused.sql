@@ -14,7 +14,7 @@ SELECT * FROM opilane;
 
 --admete lisamine tabelisse
 INSERT INTO opilane
-VALUES ('Nimi', 'perenimi', '2000-10-23', 0, 'Tartu,Eesti', 3.5),
+VALUES ('Valge', 'Sall', '2000-10-23'),
 ('Roheline', 'Pall', '2001-10-1')
 
 --uuendame tabeliandmeid
