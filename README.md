@@ -40,11 +40,70 @@ Andmebaas - struktueeritud admete kogum
 3. FOREIGN KEY
 4. Not null
 5. UNIQUE
+
 ```
+
+
 
 ## Seosed
 - üks  - ühele (nt mees --naine)
 - üks  - mitmele (nt õpilane käib erinevates õppeainetes)
   <img width="519" height="265" alt="{78702CBC-6009-46D8-972D-CE6510BDBFFD}" src="https://github.com/user-attachments/assets/aa87f6a7-7497-4f9d-9952-ae3c06e9da63" />
 - mitu  -mitmele (nt õpilane - õpetaja
+
+## Stored procedure
+  Salvestatud protseduurid - sama mis on funktsioonid programeerimises - mingi tegevus(ed), mida saab automaatselt teha        (Insert, Select, Update, Delete)
+
+```sql
+-- Proceduur, mis täidab tabeli
+Create Procedure lisakatagooria
+@nimi varchar(15)
+As
+Begin
+	Insert into Category
+	values (@nimi);
+	select * from Category;
+end
+--kutse
+Exec lisakatagooria 'test'
+
+--Proceduur, mis kustutab tabelist id järgi
+Create procedure kustutaIDJargi
+@id int
+AS
+Begin
+	SELECT * from Category;
+	Delete from Category where category_id=@id;
+	Select * from Category
+End
+-- kutse
+EXEC kustutaIDJargi 3 
+
+--otsing
+--protseduur mis otsib kõik kategooriad sisestatud 1 tähe
+Create Procedure otsing1taht
+@taht char(1)
+AS
+Begin
+	Select Category_Name from Category
+	Where Category_Name like @taht + '%';
+ENd
+--kutse
+Select * from Category
+Exec otsing1taht 'j'
+
+--Prodceduur, mis uuendab nimed sisestatud id järgi
+Create procedure uuendaKategooria
+@id int, 
+@uuendarudNimi varchar(20)
+As 
+Begin
+	Select * from Category;
+	Update Category set Category_Name=@uuendarudNimi
+	Where category_id=@id;
+end
+
+--kutse
+exec uuendaKategooria 4, 'jope'  
+```
 
