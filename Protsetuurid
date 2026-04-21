@@ -1,0 +1,37 @@
+-- Proceduur, mis täidab tabeli
+Create Procedure lisa
+@First_Name varchar(15)
+As
+Begin
+	Insert into Brands
+	values (@First_Name);
+	select * from Brands;
+end
+--kutse
+Exec lisa 'test'
+
+
+
+--Proceduur, mis kustutab tabelist id järgi
+Create procedure kustuta
+@id int
+AS
+Begin
+	SELECT * from Brands;
+	Delete from Brands where brand_id=@id;
+	Select * from Brands
+End
+-- kutse
+EXEC kustuta 3 
+
+
+Create Procedure otsing
+@taht char(1)
+AS
+Begin
+	Select Brand_Name from Brands
+	Where Brand_Name like @taht + '%';
+ENd
+--kutse
+Select * from Category
+Exec otsing 'N'
