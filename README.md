@@ -106,4 +106,4 @@ end
 --kutse
 exec uuendaKategooria 4, 'jope'  
 ```
-
+<img width="945" height="402" alt="{EB00BA5A-E58F-4CF2-8F6E-644C1AB65E27}" src="https://github.com/user-attachments/assets/de98860b-f350-45fb-9f36-b37c1922aa2f" />
