@@ -87,3 +87,57 @@ order by hind DESC;
 
 <img width="715" height="430" alt="{9C938AB8-A063-447B-AAB3-7002554824AE}" src="https://github.com/user-attachments/assets/ab34cacc-9760-4173-9e96-86453127f412" />
 
+```sql
+
+-- mark algab C tähega
+select mark from auto
+where mark like 'C%'
+
+```
+
+<img width="406" height="292" alt="{B7BDCF54-86F2-44D2-96B0-61429C014D37}" src="https://github.com/user-attachments/assets/98dc21d3-2f90-425d-b9dc-10e621c5ce55" />
+
+```sql
+
+
+--hind on vahemikus 500-800
+select hind, autonumber, mark 
+from auto
+Where hind > 5000 and hind <8000 
+
+--teine variant
+select hind, autonumber, mark 
+from auto
+Where hind between 5000 and 10000
+
+-- kombineeritud tingimused (AND, OR, NOT)
+select hind, autonumber, mark 
+from auto
+Where mark lIKe 'Volkswagen' or hind <= 100000
+
+--vaate loomine - VIEW
+create view VolkswagenAutod
+as
+select hind, autonumber, mark 
+from auto
+Where mark lIKe 'Volkswagen' 
+
+--view kasutamine
+Select * from VolkswagenAutod
+
+```
+
+```sql
+--Agregaatfunktsioond - SUM, MAX, MIN, AVG, COUNT-kogus
+
+--Leia mitu autot on tabelis
+Select count(*) as autodeArv from auto
+
+--Leia keskmine autohind 
+Select AVG(hind) as keskmineHind from auto
+
+--Leia keskmine autohind iga margi kohta
+Select mark, AVG(hind) as keskmineHind 
+from auto
+GROUP by mark
+```
