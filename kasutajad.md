@@ -73,10 +73,22 @@ Tee paremklikk:  New User...
 
 Menüüst Membership saab määrata kasutaja rollid.
 
-    db_datareader → võib lugeda
-    db_datawriter → võib kirjutada
+>db_datareader → võib lugeda
+>db_datawriter → võib kirjutada INSERT, UPDATE, DELETE
 
->>>>>pilt
+<img width="703" height="292" alt="{4E88FD4C-C7A3-4668-BF50-ABA9FEBD5A6D}" src="https://github.com/user-attachments/assets/89252fcf-95d0-497e-ae6c-22ffd23cb256" />
+
+## Kasutaja õiguste kontroll
+1. tuleb sisselogida kasutajana DirectorHärm - SQL 
+<img width="485" height="502" alt="{B25C310C-850F-4E97-A166-C34CD8BFC508}" src="https://github.com/user-attachments/assets/2c5470a4-3fa0-490b-8624-72382d931685" />
+
+2. saab tabeli sisse näha ja sissestata uus kirja.
+<img width="496" height="494" alt="{D7D1BE0C-F18A-424B-A1E9-D120B2544B45}" src="https://github.com/user-attachments/assets/869c5f2e-fd10-4c52-a3e8-4bb0b46eb3a9" />
+
+3. Krontrollime tegevusi, mis ei ole lubatud kasutajale, näiteks tabeli loomine
+<img width="732" height="588" alt="{C3FB16F5-86AA-45C9-83EC-CAD6485E9AEE}" src="https://github.com/user-attachments/assets/8eec078a-a832-47fa-aa89-62a402667ad2" />
+
+
 
 ### SQL Server Authentication Mode muutmine
 Kui ilmub viga: Error 18456, siis on tavaliselt lubatud ainult Windows Authentication.
@@ -85,6 +97,27 @@ Kui ilmub viga: Error 18456, siis on tavaliselt lubatud ainult Windows Authentic
     Server → Properties
     Security
     Vali: SQL Server and Windows Authentication mode
+    anname kasutajale directorHärm õigused
+    ainult kustutada ja uuendada tebelit
+    (DELETE, UPDATE, SELECT)
+
+<img width="742" height="801" alt="{766D8ED3-5379-4450-9798-335D49ABD524}" src="https://github.com/user-attachments/assets/a4a5fea8-3ef7-4e89-83f7-a824ef729432" />
+
+```sql
+--Grant - õiguste määramine
+--Deny - õiguste keelamine
+
+--db_datareader - select 
+--db_datawriter - insert, delete, update
+
+
+grant delete on puhkus to DirectorHärm
+grant update on puhkus to DirectorHärm
+grant select on puhkus to DirectorHärm
+
+--keelame insert
+deny insert on puhkus to DirectorHärm
+```
 
 ### GRANT käsud õiguste jagamiseks
 
@@ -95,7 +128,10 @@ INSERT 	Lisamine
 UPDATE 	Muutmine
 DELETE 	Kustutamine
 
->>>>>pilt
+
+
+<img width="730" height="753" alt="{54AAEA2C-4CCD-41A6-9A06-A177A310D912}" src="https://github.com/user-attachments/assets/38ba89b9-0e18-425b-bde3-13b8ae01c3c8" />
+
 
 
     
