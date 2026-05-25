@@ -68,3 +68,78 @@ from deleted;
 Delete from linnad where linnId=2
 ```
 <img width="487" height="343" alt="{303A3B12-C9CC-461C-BAD3-0A2C7864CA24}" src="https://github.com/user-attachments/assets/04378143-213b-4f2f-9dc7-a6266e03205e" />
+
+```sql
+--3.Update Trigger - jälgib uuendused/muutused tabelis linnad
+--ja teeb vastava kirje tabelis logi
+
+Create trigger linnaUuendamine
+On linnad -- tabel, mis triger jälgib
+for update
+as
+insert into logi(kasutaja, aeg, andmed)
+select
+SYSTEM_USER, --siselogitud user
+GETDATE(), 
+concat('vana andmed : ',
+deleted.linnanimi, ', ', deleted.maakond, ', ', deleted.rahvarv,
+' ||| uued andmed: ',
+inserted.linnanimi, ', ', inserted.maakond, ', ', inserted.rahvarv)
+from deleted INNER JOIN inserted
+on deleted.linnId=inserted.linnId;
+
+--kontroll
+Update linnad set linnanimi='Tallinn22', rahvarv=700000
+where linnId=1
+```
+<img width="563" height="354" alt="{6CC68111-EBFD-430E-8429-BFF9FC73C545}" src="https://github.com/user-attachments/assets/7a2782bf-d184-4195-9023-1e9a83f8f1b5" />
+
+```sql
+--triger sisse/välja lülitamine
+Disable Trigger linnaLisamine on linnad
+Disable Trigger linnaKustutamine on linnad
+Enable trigger linnaUuendamine ON linnad
+Enable trigger linnaKustutamine on linnad
+```
+<img width="244" height="67" alt="{1CBABE5C-4E3A-4480-8617-C4F243566C5F}" src="https://github.com/user-attachments/assets/50091d3f-8a8a-4562-a9dd-a534c12935f0" />
+
+```sql
+--Ühine triger mis jälgib kas lisamine või kustutamine tabelisse linnad
+Create trigger linnaLisamineKustutamine
+On linnad -- tabel, mis triger jälgib
+for insert, Delete
+as
+begin
+set nocount on; 
+	insert into logi(kasutaja, aeg, andmed)
+	select
+	SYSTEM_USER, --siselogitud user
+	GETDATE(), 
+	concat('lisatud: ', inserted.linnanimi, ', ', 
+	inserted.maakond, ', ', inserted.rahvarv)
+	from inserted
+
+	UNION all 
+
+	select
+	SYSTEM_USER, --siselogitud user
+	GETDATE(), 
+	concat('kustutatud: ', deleted.linnanimi, ', ', 
+	deleted.maakond, ', ', deleted.rahvarv)
+	from deleted;
+end;
+
+--kontroll
+Delete from linnad where linnId=3
+
+insert into linnad(linnanimi, maakond, rahvarv)
+Values('Viljandi', 'Viljandimaa', 50000);
+
+select * from linnad
+select * from logi
+
+```
+<img width="570" height="435" alt="{52298D48-6D41-41DE-9F75-A3FD633F939C}" src="https://github.com/user-attachments/assets/f8b5f58a-9e8d-4ecb-ba3e-cc4b6a035308" />
+
+<img width="708" height="655" alt="{77BE92C5-A527-4DF3-8ED6-A97B526C9E47}" src="https://github.com/user-attachments/assets/f5b50586-64b4-4f79-941c-085648dd5923" />
+
