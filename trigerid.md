@@ -24,3 +24,47 @@ kasutaja varchar(50),
 aeg datetime,
 andmed TEXT)
 ```
+
+```sql
+--1. Triger lisatud andmete jälgimiseks tabelis linnad,
+--jälgib andmete sisestamine tabelisse ja teeb vastava kirje logi-tabelise
+
+Create trigger linnaLisamine
+On linnad -- tabel, mis triger jälgib
+for insert
+as
+insert into logi(kasutaja, aeg, andmed)
+select
+SYSTEM_USER, --siselogitud user
+GETDATE(), 
+concat('lisatud: ', inserted.linnanimi, ', ', inserted.maakond, ', ', inserted.rahvarv)
+from inserted;
+
+--kontrollimiseks tuleb lisada linna tabelisse linnad
+insert into linnad(linnanimi, maakond, rahvarv)
+Values('Viljandi', 'Viljandimaa', 50000);
+
+select * from linnad
+select * from logi
+```
+<img width="466" height="351" alt="{479946D2-22E1-4C02-BFD6-A2C71189E47D}" src="https://github.com/user-attachments/assets/0c292472-48d9-4b28-bbe9-1260088ed9da" />
+
+```sql
+--2. Delete triger - jälgib kustutamibe tabelis linnad 
+--ja teeb vastava kirje logi tabelisse
+
+Create trigger linnaKustutamine
+On linnad -- tabel, mis triger jälgib
+for delete
+as
+insert into logi(kasutaja, aeg, andmed)
+select
+SYSTEM_USER, --siselogitud user
+GETDATE(), 
+concat('kustutatud: ', deleted.linnanimi, ', ', deleted.maakond, ', ', deleted.rahvarv)
+from deleted;
+
+--kontroll
+Delete from linnad where linnId=2
+```
+<img width="487" height="343" alt="{303A3B12-C9CC-461C-BAD3-0A2C7864CA24}" src="https://github.com/user-attachments/assets/04378143-213b-4f2f-9dc7-a6266e03205e" />
