@@ -1,5 +1,8 @@
 ## Andmebaasi võtmed (Keys)
 
+
+[Select laused](select.md) | [Kasutaja loomine SQL serveris](kasutajad.md) | [Protseduurid](Protseduurid.md) | [Küsimused](kysimused.md) | [Triggerid](trigerid.md) | [Vaade](vaade.md) | [Kodutöö](Kodutöö.md) |
+
 ### 1. Primary Key (Primaarvõti)
 Definitsioon:
 Primaarvõti on veerg (või veergude kombinatsioon), mis üheselt identifitseerib iga rea tabelis. Iga tabel saab omada ainult ühte primaarvõtit.
