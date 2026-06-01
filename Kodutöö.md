@@ -263,9 +263,10 @@ SELECT * FROM Klient WHERE email = 'mari@näide.ee';
 
 
 ## Kausutatud allikad
-Microsoft Docs – PRIMARY KEY Constraints: https://learn.microsoft.com/en-us/sql/relational-databases/tables/create-primary-keys
-Microsoft Docs – FOREIGN KEY Constraints: https://learn.microsoft.com/en-us/sql/relational-databases/tables/create-foreign-key-relationships
-GeeksForGeeks – Types of Keys in Relational Model: https://www.geeksforgeeks.org/types-of-keys-in-relational-model-candidate-super-primary-alternate-and-foreign/
-W3Schools – SQL PRIMARY KEY: https://www.w3schools.com/sql/sql_primarykey.asp
-W3Schools – SQL FOREIGN KEY: https://www.w3schools.com/sql/sql_foreignkey.asp
-Tutorialspoint – DBMS Keys: https://www.tutorialspoint.com/dbms/dbms_keys.htm
+- Microsoft Docs – PRIMARY KEY Constraints: https://learn.microsoft.com/en-us/sql/relationaldatabases/tables/create-primary-keys
+- Microsoft Docs – FOREIGN KEY Constraints: https://learn.microsoft.com/en-us/sql/relational-databases/tables/create-foreign-key-relationships
+- GeeksForGeeks – Types of Keys in Relational Model: https://www.geeksforgeeks.org/types-of-keys-in-relational-model-candidate-super-primary-alternate-and-foreign/
+- W3Schools – SQL PRIMARY KEY: https://www.w3schools.com/sql/sql_primarykey.asp
+- 3Schools – SQL FOREIGN KEY: https://www.w3schools.com/sql/sql_foreignkey.asp
+- Tutorialspoint – DBMS Keys: https://www.tutorialspoint.com/dbms/dbms_keys.htm
+- https://claude.ai (tasuta version)
