@@ -123,7 +123,7 @@ Begin
 End
 
 -- kutse
-EXEC kustuta 2 
+EXEC kustuta 6 
 
 Create Procedure otsing2
 @paev date
