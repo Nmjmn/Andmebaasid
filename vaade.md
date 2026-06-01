@@ -1,8 +1,7 @@
 ## SQL Vaated (Views)
 
 
-[Select laused](select.md) | [Kasutaja loomine SQL serveris](kasutajad.md) | [Protseduurid](Protseduurid.md) | [Küsimused](kysimused.md) | [Triggerid](trigerid.md) | [Vaade](vaade.md) |
-
+[Select laused](select.md) | [Kasutaja loomine SQL serveris](kasutajad.md) | [Protseduurid](Protseduurid.md) | [Küsimused](kysimused.md) | [Triggerid](trigerid.md) | [Vaade](vaade.md) | [Kodutöö](Kodutöö.md) |
 Mis on vaade?
 Vaade (View) on virtuaalne tabel, mis põhineb SQL-päringul. Vaade ei salvesta andmeid ise — see on nagu "akna" kaudu vaatamine pärisandmetele. Iga kord, kui vaatele viidatakse, käivitatakse taustapäring uuesti.
 
