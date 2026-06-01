@@ -152,14 +152,22 @@ Composite Key võib koosneda "tavalistest" veergudest; Compound Key sisaldab FK-
 
 SQL näide:
 ```sql
-CREATE TABLE Õpilane_Kursus (
-    õpilane_id  INT REFERENCES Õpilane(õpilane_id),
-    kursus_id   INT REFERENCES Kursus(kursus_id),
+CREATE TABLE Kursus (
+    kursus_id   INT PRIMARY KEY,
+    kursusnimi  VARCHAR(100)
+);
+
+-- Compound Key tabel
+CREATE TABLE Opilane_Kursus (
+    opilane_id  INT,
+    kursus_id   INT,
     hinne       INT,
-    PRIMARY KEY (õpilane_id, kursus_id)  -- Compound Key: mõlemad on FK-d
+    PRIMARY KEY (opilane_id, kursus_id),
+    FOREIGN KEY (opilane_id) REFERENCES Õpilane(õpilane_id),
+    FOREIGN KEY (kursus_id)  REFERENCES Kursus(kursus_id)
 );
 ```
-📸 Lisa siia ekraanipilt: Database Diagram, kus on näha seosed kolme tabeli vahel
+<img width="603" height="433" alt="{04CD845F-65B7-4114-8F3C-BFAC4AB595B5}" src="https://github.com/user-attachments/assets/00817ab0-1326-4ece-b8b7-ad5ef9acc281" />
 
 
 ### 7. Superkey (Supervõti)
