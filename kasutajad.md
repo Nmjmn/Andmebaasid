@@ -1,6 +1,6 @@
 ### Kasutajaloomine
 
-[Select laused](select.md) [Kasutaja loomine XAMPP-is](kasutajad.md) [Kasutaja loomine SQL serveris](kasutajad.md) [Triggerid](trigerid.md)
+[Select laused](select.md) [Kasutaja loomine SQL serveris](kasutajad.md) [Küsimused](kysimused.md) [Triggerid](trigerid.md)
 
 
 <img width="612" height="770" alt="pilt" src="https://github.com/user-attachments/assets/056b50fb-80b2-4681-8305-a23c61174b50" />
