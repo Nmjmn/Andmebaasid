@@ -1,5 +1,7 @@
-# Andmebaasid
+# Andmebaasid õpilase portfoolio Logitpe24
 Andmebaasidega seotud sql kood ja konspektid
+
+[Select laused](select.md) [Kasutaja loomine XAMPP-is](kasutajad.md) [Kasutaja loomine SQL serveris](kasutajad.md) [Triggerid](trigerid.md)
 
 - SQL - structured Query Language - struktureeritud päringukeel
 - DDl - Data Definition Language -andmebaasi struktuuri loomiseks - CREATE, ALTER
