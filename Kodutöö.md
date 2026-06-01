@@ -190,13 +190,15 @@ CREATE TABLE Töötaja (
     perenimi     VARCHAR(50)
 );
 ```
--- Supervõtmed selles tabelis (kõik identifitseerivad rea):
+```sql
+-- Supervõtmed selles tabelis:
 -- {töötaja_id}
 -- {isikukood}
 -- {töötaja_id, eesnimi}          ← üleliigsed veerud, aga ikka Superkey
 -- {töötaja_id, eesnimi, perenimi} ← ka see on Superkey
+```
 
-📸 Lisa siia ekraanipilt: tabeli struktuur. Selgita kommentaarina, millised veergude kombinatsioonid on Superkeyid
+<img width="413" height="299" alt="{965B3D91-E691-4BE2-AD5E-70F0D1388E75}" src="https://github.com/user-attachments/assets/182a626f-2d0f-4e72-b7a7-6d58f87c66e5" />
 
 
 ### 8. Candidate Key (Kandidaatvõti)
@@ -221,7 +223,8 @@ CREATE TABLE Sõiduk (
 
 INSERT INTO Sõiduk VALUES (1, '123ABC', 'WBA1234567890ABCDE', 'Toyota');
 ```
-📸 Lisa siia ekraanipilt: tabeli struktuur, kus on näha mitu UNIQUE + PRIMARY KEY veergu
+<img width="611" height="249" alt="{0F4FE94C-ABE2-4B60-B822-EE5AEB20BD01}" src="https://github.com/user-attachments/assets/b4d943c7-208b-4418-ba14-fba7d68fb56a" />
+
 
 
 ### 9. Alternate Key (Alternatiivne võti)
@@ -252,3 +255,5 @@ SELECT * FROM Klient WHERE klient_id = 1;
 SELECT * FROM Klient WHERE isikukood = '39001010010';
 SELECT * FROM Klient WHERE email = 'mari@näide.ee';
 ```
+
+<img width="644" height="585" alt="{8DDE185B-6BD8-4729-A885-D7C3C0716E96}" src="https://github.com/user-attachments/assets/2417c595-833e-4db0-97b4-2088d5923166" />
