@@ -136,7 +136,8 @@ INSERT INTO Registreerimine VALUES (1, 101, '2025-09-01');
 INSERT INTO Registreerimine VALUES (1, 102, '2025-09-01');  -- sama õpilane, erinev kursus ✓
 INSERT INTO Registreerimine VALUES (2, 101, '2025-09-01');  -- erinev õpilane, sama kursus ✓
 ```
-📸 Lisa siia ekraanipilt: tabeli Design vaade, kus on näha mõlemad PK veerud märgitud
+<img width="589" height="393" alt="{6F50728E-21FA-4130-8915-90FFF8875A4F}" src="https://github.com/user-attachments/assets/21ec756c-8df2-4a77-aa79-8addccc3bca2" />
+
 
 
 ### 6. Compound Key (Liitmõtmvõti)
