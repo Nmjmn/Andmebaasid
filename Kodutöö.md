@@ -260,3 +260,12 @@ SELECT * FROM Klient WHERE email = 'mari@näide.ee';
 ```
 
 <img width="644" height="585" alt="{8DDE185B-6BD8-4729-A885-D7C3C0716E96}" src="https://github.com/user-attachments/assets/2417c595-833e-4db0-97b4-2088d5923166" />
+
+
+## Kausutatud allikad
+Microsoft Docs – PRIMARY KEY Constraints: https://learn.microsoft.com/en-us/sql/relational-databases/tables/create-primary-keys
+Microsoft Docs – FOREIGN KEY Constraints: https://learn.microsoft.com/en-us/sql/relational-databases/tables/create-foreign-key-relationships
+GeeksForGeeks – Types of Keys in Relational Model: https://www.geeksforgeeks.org/types-of-keys-in-relational-model-candidate-super-primary-alternate-and-foreign/
+W3Schools – SQL PRIMARY KEY: https://www.w3schools.com/sql/sql_primarykey.asp
+W3Schools – SQL FOREIGN KEY: https://www.w3schools.com/sql/sql_foreignkey.asp
+Tutorialspoint – DBMS Keys: https://www.tutorialspoint.com/dbms/dbms_keys.htm
