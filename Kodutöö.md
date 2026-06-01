@@ -22,7 +22,8 @@ CREATE TABLE Õpilane (
 INSERT INTO Õpilane VALUES (1, 'Mari', 'Tamm');
 INSERT INTO Õpilane VALUES (2, 'Jaan', 'Kask');
 ```
-📸 Lisa siia ekraanipilt: käivita kood SQL Server Management Studios ja tee print screen tulemusest ning tabeli struktuurist (paremklikk tabelil → Design)
+<img width="499" height="501" alt="{913B82B8-8569-4862-A366-4985AE55FCA4}" src="https://github.com/user-attachments/assets/18d50ae6-9027-4ac8-bcae-174de5ebc007" />
+
 
 
 ### 2. Foreign Key (Võõrvõti)
@@ -52,7 +53,7 @@ CREATE TABLE Õpilane (
 INSERT INTO Klass VALUES (1, '10A');
 INSERT INTO Õpilane VALUES (1, 'Mari', 1);
 ```
-📸 Lisa siia ekraanipilt: näita mõlemat tabelit ja Foreign Key seost (Database Diagrams või tabeli Design vaade)
+<img width="533" height="483" alt="{F355852A-CBA9-45D6-93EA-DD0E4C059D8E}" src="https://github.com/user-attachments/assets/6635bedc-a4b4-4c49-b715-ace6f02a9fef" />
 
 
 ### 3. Unique Key (Unikaalne võti)
