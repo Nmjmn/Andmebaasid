@@ -1,4 +1,7 @@
 ## Triger - trigger - päästik
+
+[Select laused](select.md) [Kasutaja loomine XAMPP-is](kasutajad.md) [Kasutaja loomine SQL serveris](kasutajad.md) [Triggerid](trigerid.md)
+
 ### Triger - andmebaasi objekt, mis käivitub automaatselt, kui toimub steatud sündmus (nt INSERT, UPDATE , DELETE).
 Trigerite loomine - automatseerub protsessid SQL Serveris
 
