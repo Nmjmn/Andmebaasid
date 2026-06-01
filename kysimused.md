@@ -1,7 +1,7 @@
 # DDL
 
 
-[Select laused](select.md) | [Kasutaja loomine SQL serveris](kasutajad.md) | [Küsimused](kysimused.md) | [Triggerid](trigerid.md) |
+[Select laused](select.md) | [Kasutaja loomine SQL serveris](kasutajad.md) | [Protseduurid](Protseduurid.md) | [Küsimused](kysimused.md) | [Triggerid](trigerid.md) | [Vaade](vaade.md) |
 
 <img width="663" height="399" alt="{6C23BFD6-8AE6-4DC4-AA59-95CF788910CE}" src="https://github.com/user-attachments/assets/0760071c-8228-4405-b52d-c366175063ed" />
 
