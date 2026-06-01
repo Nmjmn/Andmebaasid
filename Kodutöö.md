@@ -80,7 +80,11 @@ INSERT INTO Kasutaja VALUES (2, 'jaan456', 'jaan@kool.ee');
 -- Järgmine rida annaks vea, sest email on juba olemas:
 -- INSERT INTO Kasutaja VALUES (3, 'peeter', 'mari@kool.ee');
 ```
-📸 Lisa siia ekraanipilt: näita tabelit ja proovi sisestada duplikaati — näita veateadet
+<img width="650" height="273" alt="{0F26E8AC-1277-4557-BC15-E310874C1633}" src="https://github.com/user-attachments/assets/eeffb6a9-52a4-4b27-8caa-1871f7361b4a" />
+
+<img width="690" height="290" alt="{3356540E-5102-4A0E-A8A0-7044FB82D253}" src="https://github.com/user-attachments/assets/887542ff-822d-4bd6-bc00-6bedd9105b35" />
+
+
 
 
 ### 4. Simple Key (Lihtne võti)
@@ -104,7 +108,8 @@ CREATE TABLE Toode (
 INSERT INTO Toode VALUES (1, 'Pliiats', 0.99);
 INSERT INTO Toode VALUES (2, 'Vihik', 2.49);
 ```
-📸 Lisa siia ekraanipilt: tabeli struktuur, kus on näha ühe veeru Primary Key
+<img width="506" height="326" alt="{AAE51C04-E147-441B-AFC4-192E30734B9F}" src="https://github.com/user-attachments/assets/1bb13c3e-8835-4a63-bea5-e1a6ae30b564" />
+
 
 
 ### 5. Composite Key (Komposiitsetsioon võti)
