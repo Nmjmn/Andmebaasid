@@ -1,3 +1,7 @@
+##Protsetuurid
+
+
+
 -- Proceduur, mis täidab tabeli
 Create Procedure lisa
 @First_Name varchar(15)
