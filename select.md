@@ -1,6 +1,7 @@
 ## Select laused SQL
 
-[Select laused](select.md) | [Kasutaja loomine SQL serveris](kasutajad.md) | [Küsimused](kysimused.md) | [Triggerid](trigerid.md) |
+
+[Select laused](select.md) | [Kasutaja loomine SQL serveris](kasutajad.md) | [Protseduurid](Protseduurid.md) | [Küsimused](kysimused.md) | [Triggerid](trigerid.md) | [Vaade](vaade.md) |
 
 <img width="1441" height="860" alt="{84FC6E06-97C1-47A9-BC2A-DFD7E4ABF854}" src="https://github.com/user-attachments/assets/7214cd53-df8c-4264-88b4-ed61f45c4944" />
 
